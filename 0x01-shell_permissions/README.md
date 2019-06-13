@@ -1,0 +1,1 @@
+we gonna lerar aboud permissions shell
