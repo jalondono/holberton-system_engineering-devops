@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e $(cut -b1 Acrostic | tr -d "\n")
+echo $(cut -b1 Acrostic | tr -d "\n")
