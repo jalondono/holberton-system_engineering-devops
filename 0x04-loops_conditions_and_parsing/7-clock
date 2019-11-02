@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 #print the hour with nested loops
+
 hora="0"
 min="1"
 echo 'Hour: 0'
 while ((hora <= 12)); do
+  echo 'Hour: ' $hora
   min="1"
   while ((min <= 59)); do
     echo $min
@@ -11,8 +13,4 @@ while ((hora <= 12)); do
 
   done
   ((hora++))
-   if ((hora != 13)); then
-    echo 'Hour: ' $hora
-  fi
-
 done
