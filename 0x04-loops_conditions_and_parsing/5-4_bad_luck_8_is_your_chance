@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash7
+#if elif and else statement
 i="0"
 while [ $i -le "9" ]; do
   if [ $i -eq "3" ]; then
