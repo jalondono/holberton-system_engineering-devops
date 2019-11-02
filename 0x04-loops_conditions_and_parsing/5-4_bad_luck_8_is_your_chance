@@ -3,13 +3,12 @@
 i="0"
 while [ $i -le "9" ]; do
   if [ $i -eq "3" ]; then
-    echo 'bad luck'
+    echo "bad luck"
   elif [ $i -eq "7" ]; then
-    echo 'good luck'
+    echo "good luck"
   else
-    echo 'Holberton School'
+    echo "Holberton School"
 
   fi
   ((i++))
-    
 done
