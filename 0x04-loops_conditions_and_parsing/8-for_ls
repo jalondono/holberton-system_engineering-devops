@@ -2,5 +2,5 @@
 # 8-for_ls display files and folder or a current directory
 
 for file in *; do
-    echo $file | cut -d '-' -f2
+    echo "$file" | cut -d '-' -f2
 done
