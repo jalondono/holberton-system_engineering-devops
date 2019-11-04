@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# list a pid and name of a proceess without ps
+pgrep -l bash
