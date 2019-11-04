@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#advance task 100
+pgrep -f '100-process_and_pid_file' >> /var/run/holbertonscript.pid
+trap 'echo Y U no love me?!' 2
+trap "echo I hate the kill command; rm -r /var/run/holbertonscript.pid; exit" 15 3
+while ((1)); do
+    echo 'To infinity and beyond'
+    sleep 2
+done
