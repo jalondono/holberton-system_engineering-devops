@@ -1,0 +1,1 @@
+here we gonna learn about shell
