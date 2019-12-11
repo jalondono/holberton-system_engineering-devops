@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configuring a server by bash script
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+sudo systemctl start nginx
