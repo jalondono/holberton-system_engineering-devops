@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# The root user is a superuser that can do anything on a Unix machine, the top administrator. Security wise, you must do everything that you can to prevent an attacker from logging in as
+sudo pkill -f  apache2
+sudo chmod 777 /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo -u "nginx" service nginx restart
