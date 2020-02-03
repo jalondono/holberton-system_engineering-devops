@@ -5,11 +5,10 @@
 
 import json
 import requests
-from  sys import argv
+from sys import argv
 
 if __name__ == '__main__':
     user_id = argv[1]
-
     tasks_url = 'https://jsonplaceholder.typicode.com/todos' \
                 + '?userId=' + user_id
     user_url = 'https://jsonplaceholder.typicode.com/users' \
@@ -29,4 +28,4 @@ if __name__ == '__main__':
     print("Employee {} is done with tasks({}/{}):".
           format(user, done_task, number_of_task))
     for title in completed_task:
-        print("\t{}".format(title))
+        print("\t", title)
