@@ -18,7 +18,9 @@ if __name__ == "__main__":
     data_dict = {}
     json_dict = {}
     for task in data_json:
-        tasks.append({"task": task.get('title'), "completed": task.get('completed'), "username": username})
+        tasks.append({"task": task.get('title'),
+                      "completed": task.get('completed'),
+                      "username": username})
     json_dict[argv[1]] = tasks
     with open(argv[1] + ".json", "w") as f:
         json.dump(json_dict, f)
