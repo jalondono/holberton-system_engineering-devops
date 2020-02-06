@@ -16,12 +16,12 @@ def recurse(subreddit, hot_list=[], after=''):
     req = requests.get(url, headers=cred, allow_redirects=False,
                        params=parameter)
     if req.status_code != 200:
-        print(None)
+        return None
     else:
         request_sub = req.json()
         after = (request_sub.get('data').get('after'))
         for data in request_sub.get('data').get('children'):
             hot_list.append(data)
     if after is None:
-        return hot_list[:-1]
+        return hot_list
     return recurse(subreddit, hot_list, after)
