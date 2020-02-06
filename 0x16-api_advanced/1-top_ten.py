@@ -13,7 +13,8 @@ def top_ten(subreddit):
     url = base_url + subreddit + "/hot.json"
     cred = {'User-Agent': 'testin'}
     parameter = {'limit': '10'}
-    req = requests.get(url, headers=cred, allow_redirects=False, params=parameter)
+    req = requests.get(url, headers=cred, allow_redirects=False,
+                       params=parameter)
     if req.status_code != 200:
         print(None)
     else:
