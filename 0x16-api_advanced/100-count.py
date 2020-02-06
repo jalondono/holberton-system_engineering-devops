@@ -9,8 +9,7 @@ from sys import argv
 
 
 def count_words(subreddit, word_list, after='', count={}):
-    aux_word_list = list(set(word_list))
-    aux_word_list.sort()
+    word_list.sort()
     base_url = 'https://www.reddit.com/r/'
     url = base_url + subreddit + "/hot.json"
     cred = {'User-Agent': 'testin'}
@@ -23,7 +22,7 @@ def count_words(subreddit, word_list, after='', count={}):
         request_sub = req.json()
         after = (request_sub.get('data').get('after'))
         for data in request_sub.get('data').get('children'):
-            for word in aux_word_list:
+            for word in word_list:
                 if count.get(word) is None:
                     count[word] = data.get('data').get('title').count(word) + 0
                 else:
@@ -35,4 +34,4 @@ def count_words(subreddit, word_list, after='', count={}):
             if value != 0:
                 print("{}: {:d}".format(key, count[key]))
         return count
-    return count_words(subreddit, aux_word_list, after, count)
+    return count_words(subreddit, word_list, after, count)
