@@ -9,8 +9,8 @@ from sys import argv
 
 
 def count_words(subreddit, word_list, after='', count={}):
-    word_list.sort()
     aux_word_list = list(set(word_list))
+    aux_word_list.sort()
     base_url = 'https://www.reddit.com/r/'
     url = base_url + subreddit + "/hot.json"
     cred = {'User-Agent': 'testin'}
