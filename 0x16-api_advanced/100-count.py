@@ -32,6 +32,7 @@ def count_words(subreddit, word_list, after='', count={}):
                                   + count.get(word)
     if after is None:
         for key, value in count.items():
-            print("{}: {:d}".format(key, count[key]))
+            if value != 0:
+                print("{}: {:d}".format(key, count[key]))
         return count
     return count_words(subreddit, aux_word_list, after, count)
